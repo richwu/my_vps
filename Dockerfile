@@ -14,4 +14,4 @@ RUN echo 'root:Gwuasd1212' | chpasswd
 EXPOSE 22
 
 # 启动 Shellinabox
-CMD ["/usr/bin/shellinaboxd", "-t", "-s", "/:LOGIN"]
+CMD ["/usr/bin/shellinaboxd", "-t", "-s", "checkwinsize", "/:LOGIN"]
