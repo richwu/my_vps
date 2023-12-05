@@ -4,6 +4,7 @@ FROM ubuntu:22.04
 # 安装 Shellinabox
 RUN apt-get update && \
     apt-get install -y shellinabox && \
+    apt-get install -y systemd && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
@@ -14,4 +15,4 @@ RUN echo 'root:Gwuasd1212' | chpasswd
 EXPOSE 22
 
 # 启动 Shellinabox
-CMD ["/usr/bin/shellinaboxd", "-t", "-s", "checkwinsize", "/:LOGIN"]
+CMD ["/usr/bin/shellinaboxd", "-t", "-s", "/:LOGIN"]
